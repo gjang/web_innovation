@@ -15,7 +15,7 @@
 
     </section>
     <div class="calculator">
-    <select>
+    Select the target Country: <select>
     <option value="AUS">AUS</option>
     <option value="CHN">CHN</option>
     <option value="GBR">GBR</option>
@@ -72,7 +72,6 @@ var h = document.createElement("H3");
 var t = document.createTextNode(out.toString());
 h.appendChild(t);
 var old = document.getElementById("outField");
-alert(out.toString());
 h.id = "outField";
 old.parentNode.replaceChild(h,old);
    		   		
