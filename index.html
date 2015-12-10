@@ -23,9 +23,9 @@
     <option value="USA" selected>USA</option>
     </select>
     <form>
-  RnD Expenditure : <input type="number" name="rnd" value="0" id="rnd"><br>
+  RnD Expenditure : <input type="number" name="rnd" value="3" id="rnd"><br>
 
-  # of Patents    : <input type="number" name="patent" value="0" id="patent"><br> 
+  # of Patents    : <input type="number" name="patent" value="5" id="patent"><br> 
   
   <button onclick="getValue()">Caculate!!!</button><br>
   </form>
@@ -93,6 +93,7 @@ document.getElementById("outField").innerHTML = out.toString();
     }
     body.appendChild(tbl);
 }
+getValue();
 tableCreate();
   </script>
 
