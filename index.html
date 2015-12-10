@@ -29,9 +29,11 @@
   
   <button onclick="getValue()">Caculate!!!</button><br>
   </form>
-
+	<p>
 	<h3> Creativity: </h3>
+	
 	<h3 id="outField"></h3>
+	</p>
 	</div>
 	
 	
@@ -67,7 +69,9 @@ var v1 = parseFloat(document.getElementById("rnd").value);
    		
 var out = w1*v1+w2*v2;
 var t = document.createTextNode(out.toString());
-document.getElementById("outField").appendChild(t);
+var old = document.getElementById("outField");
+t.id = 'outField';
+old.parentNode.replaceChild(t,old);
    		   		
 }
   function tableCreate(){
