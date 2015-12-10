@@ -23,9 +23,11 @@
     <option value="USA" selected>USA</option>
     </select>
     <form>
-  RnD Expenditure (Million USD)<br><input type="number" name="rnd" value="3" id="rnd"><br>
+  RnD Expenditure (Million USD)<br>
+  <input type="number" name="rnd" value="3" id="rnd"><br>
 
-  # of Patents<br><input type="number" name="patent" value="5" id="patent"><br> 
+  # of Patents<br>
+  <input type="number" name="patent" value="5" id="patent"><br> 
   
   <input type="button" value="Calculate!!" onclick="getValue()"/><br>
   </form>
@@ -37,14 +39,11 @@
 	
 	
 	
-<button onclick="myFunction()">Try it</button>
 </div>
 <script>
 var w1=0.5; //Default value (USA)
 var w2=0.5; //Default value (USA)
-function myFunction() {
-    alert("I am an alert box!");
-}
+
 function updateWeight() {
 var d = document.getElementById("select").value;
 switch(d) {
