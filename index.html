@@ -15,7 +15,7 @@
 
     </section>
     <div class="calculator" align="center">
-    Select the target Country:<select onChange="updateWeight()" id="select">
+    Select the target Country<br><select onChange="updateWeight()" id="select">
     <option value="AUS">AUS</option>
     <option value="CHN">CHN</option>
     <option value="GBR">GBR</option>
@@ -23,14 +23,14 @@
     <option value="USA" selected>USA</option>
     </select>
     <form>
-  RnD Expenditure (Million USD) : <input type="number" name="rnd" value="3" id="rnd"><br>
+  RnD Expenditure (Million USD)<input type="number" name="rnd" value="3" id="rnd"><br>
 
-  # of Patents   : <input type="number" name="patent" value="5" id="patent"><br> 
+  # of Patents<input type="number" name="patent" value="5" id="patent"><br> 
   
   <input type="button" value="Calculate!!" onclick="getValue()"/><br>
   </form>
 	<p>
-	<h3> Creativity: </h3>
+	<h3> Creativity </h3>
 	
 	<h3 id="outField"></h3>
 	</p>
@@ -84,31 +84,7 @@ h.id = "outField";
 old.parentNode.replaceChild(h,old);
    		   		
 }
-  function tableCreate(){
-    var body = document.body,
-        tbl  = document.createElement('table');
-    tbl.style.width  = '100px';
-    tbl.style.border = '1px solid black';
-	nRow=3;
-	nCol=3;
-    for(var i = 0; i < 3; i++){
-        var tr = tbl.insertRow();
-        for(var j = 0; j < 2; j++){
-            if(i == 2 && j == 1){
-                break;
-            } else {
-                var td = tr.insertCell();
-                td.appendChild(document.createTextNode('Cell'));
-                td.style.border = '1px solid black';
-                if(i == 1 && j == 1){
-                    td.setAttribute('rowSpan', '2');
-                }
-            }
-        }
-    }
-    body.appendChild(tbl);
-}
-tableCreate();
+
   </script>
 
       <footer class="site-footer">
