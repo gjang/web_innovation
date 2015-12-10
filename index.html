@@ -60,7 +60,7 @@ var v1 = parseFloat(document.getElementById("rnd").value);
    		var v3 = parseFloat(document.getElementById("patent").value);
 var out = w1*v1+w2*v2+w3*v3;
    		   		var t = document.createTextNode(out.toString());
-document.body.appendChild(t);
+document.getElementById("outField").appendChild(t);
 }
   function tableCreate(){
     var body = document.body,
