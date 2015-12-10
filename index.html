@@ -24,7 +24,7 @@
   </form>
 
 	<h3> Creativity: </h3>
-	<h3 id="outField">0</h3>
+	<div id="outField">0</div>
 	</div>
 	
 	
@@ -59,7 +59,8 @@ var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("researcher").value);
    		var v3 = parseFloat(document.getElementById("patent").value);
 var out = w1*v1+w2*v2+w3*v3;
-   		alert(out);
+   		   		var t = document.createTextNode(out.toString());
+document.body.appendChild(t);
 }
   function tableCreate(){
     var body = document.body,
