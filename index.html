@@ -23,9 +23,9 @@
     <option value="USA" selected>USA</option>
     </select>
     <form>
-  RnD Expenditure : <input type="number" name="rnd" value="3" id="rnd"><br>
+  RnD Expenditure (Million USD) : <input type="number" name="rnd" value="3" id="rnd"><br>
 
-  # of Patents    : <input type="number" name="patent" value="5" id="patent"><br> 
+  # of Patents   : <input type="number" name="patent" value="5" id="patent"><br> 
   
   <input type="button" value="Calculate!!" onclick="getValue()"/><br>
   </form>
@@ -40,11 +40,21 @@
 <button onclick="myFunction()">Try it</button>
 
 <script>
+var w1=0.5; //Default value (USA)
+var w2=0.5; //Default value (USA)
 function myFunction() {
     alert("I am an alert box!");
 }
-</script>
-   <script>
+function updateWeight() {
+var d = document.getElementById("select").value;
+switch(d) {
+case "AUS" : w1=0.1;w2=0.1; break;
+case "CHN" : w1=0.2;w2=0.2; break;
+case "GBR" : w1=0.3;w2=0.3; break;
+case "KOR" : w1=0.4;w2=0.4; break;
+case "USA" : w1=0.5;w2=0.5; break;
+}
+}
    function loadFile() {
     var N = 10;
    	var values = [];
@@ -61,8 +71,6 @@ function myFunction() {
    	}
    }
    function getValue() {
-var w1=0.1;
-var w2=0.2;
 
 var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("patent").value);
