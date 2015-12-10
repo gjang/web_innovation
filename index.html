@@ -68,11 +68,13 @@ var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("patent").value);
    		
 var out = w1*v1+w2*v2;
+var h = document.createElement("H3");
 var t = document.createTextNode(out.toString());
+h.append(t);
 var old = document.getElementById("outField");
 alert(out.toString());
-t.id = "outField";
-old.parentNode.replaceChild(t,old);
+h.id = "outField";
+old.parentNode.replaceChild(h,old);
    		   		
 }
   function tableCreate(){
