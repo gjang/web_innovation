@@ -20,12 +20,14 @@
     <form>
     <form action="" method="post" name="formxml">
     
-  <input type="number" name="rnd" value="0" id="rnd">
-  <input type="number" name="researcher" value="0" id="researcher">
-  <input type="number" name="patent" value="0" id="patent">
+  RnD Expenditure : <input type="number" name="rnd" value="0" id="rnd"><br>
+  Researchers     : <input type="number" name="researcher" value="0" id="researcher"><br>
+  # of Patents    : <input type="number" name="patent" value="0" id="patent"><br> 
   
-  <input type="button" onclick="getValue();">
+  <input type="button" onclick="getValue();">Caculate!!!</input><br>
+  
 </form>
+
     </form>
    <script>
    function loadFile() {
@@ -51,7 +53,9 @@
    		var v2 = document.getElementById("researcher");
    		var v3 = document.getElementById("patent");
    		
-       return w1*v1+w2*v2+w3*v3;
+       var creativity = w1*v1+w2*v2+w3*v3;
+       var result = document.creatTextNode(creativity);
+       document.body.appendChild(result);
    }
   function tableCreate(){
     var body = document.body,
