@@ -17,13 +17,49 @@
       <a href="https://github.com/gjang/web_innovation/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/gjang/web_innovation/tarball/master" class="btn">Download .tar.gz</a>
     </section>
+    <form>
+    <form action="" method="post" name="formxml">
+    
+  <input type="number" name="rnd" value="0" id="rnd">
+  <input type="number" name="researcher" value="0" id="researcher">
+  <input type="number" name="patent" value="0" id="patent">
+  
+  <input type="button" onclick="getValue();">
+</form>
+    </form>
    <script>
+   function loadFile() {
+    var N = 10;
+   	var values = [];
+   	var preLoc = "";
+   	var nLoc = 0;
+   	var locList = [];
+   	var locs = {};
+   	for( var i = 0; i < N; i++) {
+   	   var conts = line.split(",");
+   	   if (conts[0] != preLoc ) {
+   	   	  locs[conts[0]] = {};
+   	   }
+   	   locs[conts[0]][conts[2]] = conts[1];
+   	}
+   }
+   function getValue(w1, v1, w2, v2, w3, v3) {
+   	var w1=0.2;
+   	var w2=0.3;
+   	var w3=0.4;
+   		var v1 = document.getElementById("rnd");
+   		var v2 = document.getElementById("researcher");
+   		var v3 = document.getElementById("patent");
+   		
+       return w1*v1+w2*v2+w3*v3;
+   }
   function tableCreate(){
     var body = document.body,
         tbl  = document.createElement('table');
     tbl.style.width  = '100px';
     tbl.style.border = '1px solid black';
-
+	nRow=3;
+	nCol=3;
     for(var i = 0; i < 3; i++){
         var tr = tbl.insertRow();
         for(var j = 0; j < 2; j++){
