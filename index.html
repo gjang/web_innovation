@@ -52,19 +52,15 @@ function myFunction() {
    	}
    }
    function getValue() {
-   	var w1=parseFloat(0.2);
-   	var w2=parseFloat(0.3);
-   	var w3=parseFloat(0.4);
-   		var v1 = parseFloat(document.getElementById("rnd").value);
+var w1=0.1;
+var w2=0.2;
+var w3=0.3;
+var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("researcher").value);
    		var v3 = parseFloat(document.getElementById("patent").value);
-   		
-       var creativity = w1*v1+w2*v2+w3*v3;
-       var result = document.creatTextNode(creativity);
-       var ele = document.getElementById("outField");
-       alert(creativity);
-       ele.appndChild(result);
-   }
+var out = w1*v1+w2*v2+w3*v3;
+   		alert(out);
+}
   function tableCreate(){
     var body = document.body,
         tbl  = document.createElement('table');
