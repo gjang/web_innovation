@@ -16,15 +16,15 @@
     </section>
     <div class="calculator">
     <select>
-    <option value="USA">USA</option>
-    <option value="China">China</option>
-    <option value="UK">UK</option>
-    <option value="Korea">Korea</option>
-    <option value="Singapor">Singapore</option>
+    <option value="AUS">AUS</option>
+    <option value="CHN">CHN</option>
+    <option value="GBR">GBR</option>
+    <option value="KOR">KOR</option>
+    <option value="USA" selected>USA</option>
     </select>
     <form>
   RnD Expenditure : <input type="number" name="rnd" value="0" id="rnd"><br>
-  Researchers     : <input type="number" name="researcher" value="0" id="researcher"><br>
+
   # of Patents    : <input type="number" name="patent" value="0" id="patent"><br> 
   
   <button onclick="getValue()">Caculate!!!</button><br>
@@ -61,13 +61,13 @@ function myFunction() {
    function getValue() {
 var w1=0.1;
 var w2=0.2;
-var w3=0.3;
+
 var v1 = parseFloat(document.getElementById("rnd").value);
-   		var v2 = parseFloat(document.getElementById("researcher").value);
-   		var v3 = parseFloat(document.getElementById("patent").value);
-var out = w1*v1+w2*v2+w3*v3;
-   		   		var t = document.createTextNode(out.toString());
-document.getElementById("outField").appendChild(t);
+   		var v2 = parseFloat(document.getElementById("patent").value);
+   		
+var out = w1*v1+w2*v2;
+documnet.getElementById("outFile").innerHTML = out.toString();
+   		   		
 }
   function tableCreate(){
     var body = document.body,
