@@ -70,7 +70,8 @@ var v1 = parseFloat(document.getElementById("rnd").value);
 var out = w1*v1+w2*v2;
 var t = document.createTextNode(out.toString());
 var old = document.getElementById("outField");
-t.id = 'outField';
+alert(out.toString());
+t.id = "outField";
 old.parentNode.replaceChild(t,old);
    		   		
 }
