@@ -49,15 +49,16 @@
 <script>
 var w1=0.31868023; //Default value (USA)
 var w2=0.68131977; //Default value (USA)
+var gni=53942.733691;
 
 function updateWeight() {
 var d = document.getElementById("select").value;
 switch(d) {
-case "AUS" : w1=0.11837214;w2=0.88162786; break;
-case "CHN" : w1=0.0213549;w2=0.9786451; break;
-case "GBR" : w1=0.3010449;w2=0.6989551; break;
-case "KOR" : w1=0.09348616;w2=0.90651384; break;
-case "USA" : w1=0.31868023;w2=0.68131977; break;
+case "AUS" : w1=0.11837214;w2=0.88162786; gni=43671.744843;break;
+case "CHN" : w1=0.0213549;w2=0.9786451; gni=11817.703414;break;
+case "GBR" : w1=0.3010449;w2=0.6989551; gni=38367.162162;break;
+case "KOR" : w1=0.09348616;w2=0.90651384; gni=33324.948815;break;
+case "USA" : w1=0.31868023;w2=0.68131977; gni=53942.733691;break;
 }
 }
    function loadFile() {
@@ -80,7 +81,7 @@ case "USA" : w1=0.31868023;w2=0.68131977; break;
 var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("patent").value);
    		
-var out = w1*v1+w2*v2;
+var out = (w1*v1+w2*v2)/gni;
 var h = document.createElement("H3");
 var t = document.createTextNode(out.toString());
 h.appendChild(t);
