@@ -82,6 +82,7 @@ var v1 = parseFloat(document.getElementById("rnd").value);
    		var v2 = parseFloat(document.getElementById("patent").value);
    		
 var out = (w1*v1+w2*v2)/gni;
+out=Math.ceil(out*10000)/10000;
 var h = document.createElement("H3");
 var t = document.createTextNode(out.toString());
 h.appendChild(t);
